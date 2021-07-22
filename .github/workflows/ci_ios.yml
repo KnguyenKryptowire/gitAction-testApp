@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download Apple Provisioning Profiles
+        uses: Apple-Actions/download-provisioning-profiles@v1
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
 
