@@ -26,5 +26,7 @@ jobs:
         env:
           APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
         run: |
-          xcodebuild -project APP_PATH/testApp/testApp.xcodeproj
-          echo "Build successfully"
+          # xcodebuild -project APP_PATH/testApp/testApp.xcodeproj
+          # echo "Build successfully"
+          pwd
+          ls -lhR
