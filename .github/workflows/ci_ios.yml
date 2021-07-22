@@ -27,5 +27,5 @@ jobs:
           APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
         run: |
            # xcodebuild -project ./testApp/testApp.xcodeproj -allowProvisioningUpdates
-          xcodebuild clean test -project ./testApp/testApp.xcodeproj  -destination "platform=iOS Simulator,name=iPhone 12 Pro Max"
+          xcodebuild -project ./testApp/testApp.xcodeproj  -destination "platform=iOS Simulator,name=iPhone 12 Pro Max"
           echo "Build successfully"
