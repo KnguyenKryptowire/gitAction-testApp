@@ -19,6 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
+        run: sudo xcode-select -switch /Applications/Xcode_$XC_Version.app
       - name: Find path runner
         run: ls -la
