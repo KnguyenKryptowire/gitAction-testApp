@@ -13,12 +13,19 @@ jobs:
 
     #Environment variables
     env:
-      XC_Version: ${{'12'}}
+      XC_VERSION: ${{'12'}}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Select Xcode
+<<<<<<< HEAD
         run: sudo xcode-select -switch /Applications/Xcode_$XC_Version.app
+=======
+        run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
+      
+>>>>>>> e53bc20facd5c7aa07a78cede3618365b78ec841
       - name: Find path runner
-        run: ls -la
+        run: | 
+            pwd
+            ls -lhR
