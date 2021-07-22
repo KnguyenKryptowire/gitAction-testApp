@@ -13,7 +13,7 @@ jobs:
 
     #Environment variables
     env:
-      XC_Version: ${{'12'}}
+      XC_VERSION: ${{'12'}}
 
     steps:
       - name: Checkout
