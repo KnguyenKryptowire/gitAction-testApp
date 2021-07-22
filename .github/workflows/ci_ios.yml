@@ -26,5 +26,5 @@ jobs:
         env:
           APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
         run: |
-          xcodebuild -project ./testApp/testApp.xcodeproj
+          xcodebuild -project ./testApp/testApp.xcodeproj -allowProvisioningUpdates
           echo "Build successfully"
