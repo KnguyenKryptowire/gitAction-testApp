@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download Apple Provisioning Profiles
-        uses: Apple-Actions/download-provisioning-profiles@v1
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
 
@@ -29,5 +27,5 @@ jobs:
           APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
         run: |
            # xcodebuild -project ./testApp/testApp.xcodeproj -allowProvisioningUpdates
-          xcodebuild clean test -project ./testApp/testApp.xcodeproj -scheme testApp -destination "platform=iOS Simulator,name=iPhone 12 Pro Max"
+          xcodebuild clean test -project ./testApp/testApp.xcodeproj  -destination "platform=iOS Simulator,name=iPhone 12 Pro Max"
           echo "Build successfully"
