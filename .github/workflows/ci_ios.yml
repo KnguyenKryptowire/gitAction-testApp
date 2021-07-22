@@ -14,18 +14,17 @@ jobs:
     #Environment variables
     env:
       XC_VERSION: ${{'12'}}
+      #APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Select Xcode
-<<<<<<< HEAD
-        run: sudo xcode-select -switch /Applications/Xcode_$XC_Version.app
-=======
         run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
-      
->>>>>>> e53bc20facd5c7aa07a78cede3618365b78ec841
-      - name: Find path runner
-        run: | 
-            pwd
-            ls -lhR
+
+      - name: Build
+        env:
+          APP_PATH: ${{'/Users/runner/work/gitAction-testApp/gitAction-testApp'}}
+        run: |
+          xcodebuild -project APP_PATH/testApp/testApp.xcodeproj
+          echo "Build successfully"
