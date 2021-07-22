@@ -30,3 +30,4 @@ jobs:
           # echo "Build successfully"
           pwd
           ls -lhR
+          which testApp.xcodeproj
