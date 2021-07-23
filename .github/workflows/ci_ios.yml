@@ -22,6 +22,8 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
 
+      - name: Build Emulator
+        run: xcodebuild -sdk iphonesimulator | xcpretty
       - name: Build
         run: |
           xcodebuild -project ./testApp/testApp.xcodeproj  -destination "platform=iOS Simulator,name=iPhone 12 Pro Max" -allowProvisioningUpdates
